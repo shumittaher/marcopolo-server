@@ -1,0 +1,44 @@
+[debug] [2024-09-27T15:54:33.257Z] ----------------------------------------------------------------------
+[debug] [2024-09-27T15:54:33.260Z] Command:       /home/shumitt/.nvm/versions/node/v20.14.0/bin/node /home/shumitt/.nvm/versions/node/v20.14.0/bin/firebase init
+[debug] [2024-09-27T15:54:33.260Z] CLI Version:   13.20.0
+[debug] [2024-09-27T15:54:33.260Z] Platform:      linux
+[debug] [2024-09-27T15:54:33.260Z] Node Version:  v20.14.0
+[debug] [2024-09-27T15:54:33.261Z] Time:          Fri Sep 27 2024 21:54:33 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-09-27T15:54:33.261Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-27T15:54:33.266Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-27T15:54:33.266Z] > authorizing via signed-in user (shumitt@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/shumitt/projects/marcopolo-server
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-09-27T15:57:05.733Z] > refreshing access token with scopes: []
+[debug] [2024-09-27T15:57:05.735Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-09-27T15:57:05.735Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-27T15:57:06.422Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-09-27T15:57:06.427Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-27T15:57:06.439Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-09-27T15:57:06.439Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"marco-server","name":"marco-server"}
+[debug] [2024-09-27T15:57:08.247Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-09-27T15:57:08.247Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-09-27T15:57:08.248Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/home/shumitt/.nvm/versions/node/v20.14.0/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/shumitt/.nvm/versions/node/v20.14.0/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID marco-server. Please try again with a unique project ID.
